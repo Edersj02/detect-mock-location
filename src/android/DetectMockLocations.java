@@ -62,7 +62,7 @@ public class DetectMockLocations extends CordovaPlugin {
             }
         }
         if (count > 0) {
-            callbackContext.error("Mock Location Is Enabled");
+            callbackContext.error(count);
         } else {
             callbackContext.success("Mock Location Is Not Enabled");
         }
