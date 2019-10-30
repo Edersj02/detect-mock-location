@@ -25,7 +25,7 @@ public class DetectMockLocations extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        context = this.cordova.getActivity();;
+        context = this.cordova.getActivity();
         if (action.equals("areThereMockPermissionApps")) {
             areThereMockPermissionApps(callbackContext);
             return true;
