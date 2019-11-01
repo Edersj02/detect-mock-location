@@ -53,10 +53,15 @@ public class DetectMockLocations extends CordovaPlugin implements GoogleApiClien
     private boolean sw = false;
     private Dialog dialog;
 
+    String title;
+    String msg;
+
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         this.activity = this.cordova.getActivity();
         this.context = activity.getApplicationContext();
+        this.title = args.getString(0);
+        this.msg = args.getString(1);
         if (action.equals("initCheckMockLocation")) {
             initCheckMockLocation();
             return true;
@@ -187,9 +192,9 @@ public class DetectMockLocations extends CordovaPlugin implements GoogleApiClien
 
     private Dialog showAlert() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this.activity);
-        builder.setTitle("Trip2")
+        builder.setTitle(this.title)
                 .setCancelable(false)
-                .setMessage("Usted está utilizando una App para simular su ubicación")
+                .setMessage(this.msg)
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         System.exit(0);
