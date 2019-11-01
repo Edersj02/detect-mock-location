@@ -1,11 +1,11 @@
 {
-  "name": "detectmocklocations",
-  "version": "1.0.0",
-  "description": "Detect if there are applications that require mock location",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Eder Santa Cruz Jiménez",
-  "license": "ISC"
+    "name": "detectmocklocations",
+    "version": "1.0.0",
+    "description": "Detect if there are applications that require mock location",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Eder Santa Cruz Jiménez",
+    "license": "Apache-2.0"
 }
