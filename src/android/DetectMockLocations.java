@@ -2,6 +2,7 @@ package cordova.detect.mock.location;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
+import org.apache.cordova.PluginResult;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -37,6 +38,8 @@ import cordova.detect.mock.location.PermissionHelper;
  */
 public class DetectMockLocations extends CordovaPlugin implements GoogleApiClient.ConnectionCallbacks,
     GoogleApiClient.OnConnectionFailedListener, LocationListener {
+
+    private static final String TAG = "DetectMockLocations";
 
     public static final int START_REQ_CODE = 0;
     public static final int PERMISSION_DENIED_ERROR = 20;
